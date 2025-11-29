@@ -31,7 +31,7 @@ export class AuthService {
       );
       if (userAccount) {
         //call another method if an action nedd to performed like if user reg done forceful logn else redirect if not needed if needed call that mehod
-        return this.login(email, password);
+        return this.login({ email, password }); //
       } else {
         return userAccount;
       }
@@ -60,7 +60,7 @@ export class AuthService {
   async logout() {
     try {
       await this.account.deleteSessions();
-    } catch (error) {
+    } catch (err) {
       console.log("Appwrite service :: logout :: error", err);
     }
   }
@@ -68,4 +68,4 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default AuthService;
+export default authService;
