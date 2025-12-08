@@ -8,7 +8,7 @@ import React, { useId } from "react";
 // }
 
 const Input = React.forwardRef(function Input(
-  { label, type = "text", className = "", ...UNSAFE_WithComponentProps },
+  { label, type = "text", className = "", ...props },
   ref
 ) {
   const id = useId();
