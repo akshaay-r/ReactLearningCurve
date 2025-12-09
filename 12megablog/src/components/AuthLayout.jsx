@@ -8,6 +8,14 @@ function Protected({ childern, authentication = true }) {
   const authStatus = useSelector((state) => state.auth.status);
 
   useEffect(() => {
+    // easier method
+    // if (authStatus === true) {
+    //   navigate("/");
+    // } else if (authStatus === false) {
+    //   navigate("/login");
+    // }
+    // Can use this in condition
+    // let authValue = authStatus === true ? true : false;
     if (authentication && authStatus !== authentication) {
       navigate("/login");
     } else if (!authentication && authStatus !== authentication) {
@@ -15,7 +23,8 @@ function Protected({ childern, authentication = true }) {
     }
     setLoader(false);
   }, [authStatus, navigate, authentication]);
-  return <div></div>;
+
+  return loader ? <h1>Loading.....</h1> : <>{childern}</>;
 }
 
 export default Protected;

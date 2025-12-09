@@ -5,10 +5,11 @@ import { Logo, Container, LogoutBtn } from "../index";
 import { useSelector } from "react-redux";
 
 function Header() {
+  const navigate = useNavigate();
+
   const authStatus = useSelector((state) => {
     state.auth.status;
   });
-  const navigate = useNavigate();
 
   const naItems = [
     {
