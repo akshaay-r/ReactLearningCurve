@@ -4,17 +4,22 @@ import Header from "./Header/Header";
 import Logo from "./Logo";
 import LogoutBtn from "../components/Header/LogoutBtn";
 import RTE from "./RTE";
-import Signup from "../pages/Signup";
-import Login from "../pages/Login";
+import Signup from "./Signup";
+import Login from "./Login";
 import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
+import Button from "./Header/Button";
+import Input from "./Header/input";
+import Select from "./Select";
 
 export {
   Header,
   PostCard,
   Footer,
   Container,
+  Input,
+  Select,
   Logo,
   PostForm,
   Login,
@@ -22,4 +27,5 @@ export {
   Signup,
   RTE,
   AuthLayout,
+  Button,
 };

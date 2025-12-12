@@ -5,9 +5,10 @@ import authService from "../appwrite/auth";
 import { login } from "../store/authSlice";
 import { Button, Input, Logo } from "./index";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 // import { use } from "react";
 
-function Signup() {
+export default function Signup() {
   const dispatch = useDispatch();
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -92,5 +93,3 @@ function Signup() {
     </div>
   );
 }
-
-export default Signup;
